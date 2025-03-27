@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: 1px solid red;
+    
   }
 
   /* variables */
@@ -107,11 +107,57 @@
     z-index: 2;
   }
 
-  .need h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+  .need h4 {
+    font-size: 1.2rem;
   }
   
   .need p {
     font-size: 1rem;
+    margin-top: 1rem;
   }
+
+  /* estilos seccion agua caliente en cualquier lugar */
+
+  .hotwater{
+    width: 100%;
+    max-width: 100%;
+    padding: 2rem ;
+    text-align: center;
+    color: white;
+    position: relative;
+    text-align: justify;
+    color: white;
+    position: relative;
+    background-color: #30c98b;
+    background-image: linear-gradient(180deg, #30c98b 0%, #4d9080 27%, #54a6a1 100%);
+  }
+
+  .hotwater h4{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .hotwater p{
+    margin-bottom: 1rem;
+  }
+
+  .list{
+    list-style: none;
+    margin-bottom: 2rem;
+  }
+
+  li {
+    margin-bottom: 1rem;
+  }
+
+  .img-park{
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 0;
+    border-radius: 55%;
+  }
+
+  /**/
