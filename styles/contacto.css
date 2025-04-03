@@ -1,7 +1,7 @@
 body {
     font-family: sans-serif;
     margin: 0;
-    padding: 2rem;
+  
     background-color: #85FFBD;
     background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
     color: #333;
@@ -17,7 +17,6 @@ body {
     margin: 0 auto;
     background: white;
     padding: 2rem;
-    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
@@ -31,12 +30,12 @@ body {
     padding: 0.8rem;
     margin-top: 0.3rem;
     border: 1px solid #ccc;
-    border-radius: 5px;
     box-sizing: border-box;
   }
   
   button {
-    margin-top: 1.5rem;
+    display: block;
+    margin: 1.5rem auto 0 auto;
     padding: 0.8rem 1.5rem;
     background-color: #30c98b;
     color: white;
@@ -49,8 +48,43 @@ body {
     background-color: #249e6c;
   }
   
+
+  /*estilos footer*/
+
   footer {
     text-align: center;
     margin-top: 2rem;
+    background-color: #222;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  
+  .footer-nav {
+    margin-bottom: 1rem;
+  }
+  
+  .footer-nav a {
+    color: white;
+    margin: 0 0.5rem;
+    text-decoration: none;
+  }
+  
+  .footer-nav a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-info {
+    margin-bottom: 1rem;
+  }
+  
+  .footer-icons img {
+    width: 32px;
+    height: auto;
+    margin: 0 0.3rem;
+  }
+  .footer-icons img:nth-child(2) {
+    width: 50px;
+    height: auto;
   }
   
