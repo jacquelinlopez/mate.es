@@ -19,8 +19,25 @@
 <header class="header">
     <div class="container">
         <img src="images/logo.png" alt="logo" class="logo">
-        <img src="images/menu-hamburguesa.svg" alt="menu" class="menu-icon">
+
+        <!-- Menú escritorio -->
+        <nav class="nav-desktop">
+            <a href="index.html">Inicio</a>
+            <a href="sobremi.html">Sobre mí</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <!-- Ícono menú hamburguesa (solo visible en móvil) -->
+        <img src="images/menu-hamburguesa.svg" alt="menu" class="menu-icon" id="menuToggle">
     </div>
+
+     <!-- Menú móvil -->
+     <nav class="nav-mobile" id="navMobile">
+        <a href="index.html">Inicio</a>
+        <a href="sobremi.html">Sobre mí</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </header>
         
 </header>
 
@@ -184,5 +201,7 @@
             <img src="./images/argentina-flag-icon-32.png" alt="icono bandera argentina">
         </div>
     </footer>
+
+    <script src="javascript/menu.js"></script>  
 </body>
 </html>

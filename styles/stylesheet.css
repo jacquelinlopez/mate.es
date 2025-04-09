@@ -53,6 +53,50 @@
     width: auto;
   }
 
+  /*ocultar menu icon en desktop*/
+  .nav-desktop {
+    display: none;
+  }
+
+  /* Menú móvil oculto inicialmente */
+.nav-mobile {
+  display: none;
+  background-color: #4d9080;
+  padding: 1rem;
+  text-align: right;
+}
+
+.nav-mobile a {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-mobile a:hover {
+  text-decoration: underline;
+}
+
+/* VERSIÓN ESCRITORIO */
+@media (min-width: 768px) {
+  .nav-desktop {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .nav-desktop a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .menu-icon,
+  .nav-mobile {
+    display: none;
+  }
+}
+
+
   /* estilos hero*/
   .hero{
     display: flex;
