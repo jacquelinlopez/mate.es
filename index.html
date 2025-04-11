@@ -182,14 +182,23 @@
 
       <!-- seccion galeria final-->
     
+        <section class="gallery-wrapper">
+            <div class="slider-container">
+            <button class="slider-arrow left" id="prev">&#60;</button>
 
-
-        <div class="slider">
+        <div class="slider" id="slider">
             <img src="./images/final.jpg" alt="dispensador con hombre esperando">
             <img src="./images/dispensador-parque-lejos.jpg" alt="dispensador">
             <img src="./images/dispenser-principal.png" alt="dispensador">
             <img src="./images/estacion.jpg" alt="dispensador">
         </div>
+        <button class="slider-arrow right" id="next">&#62;</button>
+        </div>
+
+        <div class="slider-counter">
+            <span id="counter">1 / 4</span>
+        </div>
+      </section>
 
        
       
@@ -214,6 +223,6 @@
         </div>
     </footer>
 
-    <script src="javascript/menu.js"></script>  
+    <script src="javascript/scripts.js"></script>  
 </body>
 </html>
