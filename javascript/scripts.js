@@ -60,3 +60,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
   updateCounter();
 });
+
+/* formulario */ 
+
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('form-contacto');
+  const successMsg = document.getElementById('form-success');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // Evita recargar la página
+
+    const formData = new FormData(form);
+
+    fetch('https://docs.google.com/forms/d/e/1FAIpQLSd7FslpvxYgmUxOf-o6GHqGAWlrXQzvGsIHLVvNuG04jcmsUA/formResponse', {
+      method: 'POST',
+      body: formData,
+      mode: 'no-cors'
+    })
+    .then(() => {
+      form.reset(); // Limpiamos el formulario
+      successMsg.style.display = 'block'; // Mostramos el mensaje
+    })
+    .catch((err) => {
+      console.error('Error al enviar el formulario', err);
+    });
+  });
+});
