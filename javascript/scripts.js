@@ -7,59 +7,7 @@ toggle.addEventListener("click", () => {
   navMobile.style.display = navMobile.style.display === "block" ? "none" : "block";
 });
 
-/* galeria imagenes */
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.slider img').forEach((img) => {
-    img.addEventListener('click', () => {
-      img.scrollIntoView({
-        behavior: 'smooth',
-        inline: 'center',
-        block: 'nearest'
-      });
-    });
-  });
-});
-
-/*flechas interccion */ 
-
-document.addEventListener("DOMContentLoaded", () => {
-  const slider = document.getElementById("slider");
-  const images = slider.querySelectorAll("img");
-  const prevBtn = document.getElementById("prev");
-  const nextBtn = document.getElementById("next");
-  const counter = document.getElementById("counter");
-
-  let currentIndex = 0;
-
-  function updateCounter() {
-    counter.textContent = `${currentIndex + 1} / ${images.length}`;
-  }
-
-  function scrollToImage(index) {
-    if (index >= 0 && index < images.length) {
-      images[index].scrollIntoView({ behavior: "smooth", inline: "center" });
-      currentIndex = index;
-      updateCounter();
-    }
-  }
-
-  prevBtn.addEventListener("click", () => {
-    scrollToImage(currentIndex - 1);
-  });
-
-  nextBtn.addEventListener("click", () => {
-    scrollToImage(currentIndex + 1);
-  });
-
-  images.forEach((img, idx) => {
-    img.addEventListener("click", () => {
-      scrollToImage(idx);
-    });
-  });
-
-  updateCounter();
-});
 
 /* formulario */ 
 
@@ -85,4 +33,44 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error('Error al enviar el formulario', err);
     });
   });
+});
+
+ // efecto como funciona 
+const cards = document.querySelectorAll('.step-card');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, {
+  threshold: 0.3 // Cuando el 30% del elemento es visible
+});
+
+cards.forEach(card => {
+  observer.observe(card);
+});
+
+/* galeria asi se veria tu tienda */
+
+const track = document.querySelector('.carousel-track');
+const prevButton = document.querySelector('.carousel-button.prev');
+const nextButton = document.querySelector('.carousel-button.next');
+
+let currentIndex = 0;
+const totalImages = document.querySelectorAll('.carousel-image').length;
+
+function updateCarousel() {
+  track.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+prevButton.addEventListener('click', () => {
+  currentIndex = (currentIndex === 0) ? totalImages - 1 : currentIndex - 1;
+  updateCarousel();
+});
+
+nextButton.addEventListener('click', () => {
+  currentIndex = (currentIndex === totalImages - 1) ? 0 : currentIndex + 1;
+  updateCarousel();
 });
