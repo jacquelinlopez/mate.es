@@ -96,7 +96,7 @@ html, body {
   /* media queries*/
   @media (min-width: 768px) {
     body {
-      padding-bottom: 150px;
+      padding-bottom: 250px;
     }
     
     .formulario-contacto {
